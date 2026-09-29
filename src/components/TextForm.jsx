@@ -63,8 +63,8 @@ export default function TextForm(props) {
 		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleCapital}>Capitalize</button>
 		<div className='pt-4'>
 		<h4>Your Text Summary</h4>
-		<p>{text.split(" ").filter((element) =>{return element.length !== 0}).length} words and {text.length} characters</p>
-		<p>{0.008 * text.split(" ").filter((element) =>{return element.length !== 0}).length} minutes read</p>
+		<p>{text.split(/\s+/).filter((element) =>{return element.length !== 0}).length} words and {text.length} characters</p>
+		<p>{0.008 * text.split(/\s+/).filter((element) =>{return element.length !== 0}).length} minutes read</p>
 		<h4>Preview</h4>
 		<p>{text === "" ? "Nothing to preview!" : text}</p>
 		</div>
