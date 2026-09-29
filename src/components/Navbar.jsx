@@ -23,10 +23,6 @@ export default function Navbar(props) {
 	  <button  className={`border-0 bg-transparent fs-5 text-${props.mode === "light" ? "dark" : "light"}`} onClick={props.toggleMode}>
 		{props.mode === 'light'? <MdLightMode/> : <MdDarkMode/>}
 	  </button>
-      {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
     </div>
   </div>
 </nav>
