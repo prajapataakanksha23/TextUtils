@@ -44,23 +44,29 @@ export default function TextForm(props) {
 
   return (
 	<>
-	<div className='container pt-4'>
-		<h3 >{props.heading}</h3>
-		<div className='py-3'>
-  			<textarea className="form-control" id="exampleFormControlTextarea1" value={text} onChange={handleChange} rows="8"></textarea>
+	<div className='container'>
+		<div className='text-center'>
+		<h3 >Accidentally left the caps lock on and typed something, but can't be bothered to start again and retype it all?</h3>
+		<p>Simply enter your text and convert it to uppercase, lowercase, remove extra spaces and more.</p>
+
 		</div>
-		<button className='btn btn-primary mt-3' onClick={handleUp}>Uppercase</button>
-		<button className='btn btn-primary mt-3 mx-md-3' onClick={handleLower}>Lowercase</button>
-		<button className='btn btn-primary mt-3 mx-md-3' onClick={handleClear}>Clear Text</button>
-		<button className='btn btn-primary mt-3 mx-md-3' onClick={handleCopy}>Copy</button>
-		<button className='btn btn-primary mt-3 mx-md-3' onClick={handleSpaces}>Remove Extra Spaces</button>
-		<button className='btn btn-primary mt-3 mx-md-3' onClick={handleCapital}>Capitalize</button>
+		<div className='py-3'>
+  			<textarea className="form-control" style={{backgroundColor: props.mode === "light" ? "#FFFFFF" : "#1E293B",
+    		color: props.mode === "light" ? "#0F172A" : "#F8FAFC",borderColor: props.mode === "light" ? "#DEE2E6" : "#334155"}} 
+			id="exampleFormControlTextarea1" value={text} onChange={handleChange} rows="8"></textarea>
+		</div>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleUp}>Uppercase</button>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleLower}>Lowercase</button>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2 ' onClick={handleClear}>Clear Text</button>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleCopy}>Copy Text</button>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleSpaces}>Remove Extra Spaces</button>
+		<button disabled = {text.length === 0} className='btn btn-primary mt-3 mx-2' onClick={handleCapital}>Capitalize</button>
 		<div className='pt-4'>
 		<h4>Your Text Summary</h4>
-		<p>{text.trim() === ""? 0 :text.trim().split(/\s+/).length} words and {text.length} characters</p>
-		<p>{text.trim() === ""? 0 :0.008 * text.split(" ").length} minutes read</p>
+		<p>{text.split(" ").filter((element) =>{return element.length !== 0}).length} words and {text.length} characters</p>
+		<p>{0.008 * text.split(" ").filter((element) =>{return element.length !== 0}).length} minutes read</p>
 		<h4>Preview</h4>
-		<p>{text === "" ? "Enter something in the textbox above to preview it here!" : text}</p>
+		<p>{text === "" ? "Nothing to preview!" : text}</p>
 		</div>
 	</div>
 	

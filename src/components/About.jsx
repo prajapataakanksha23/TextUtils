@@ -1,5 +1,8 @@
 import React from 'react'
 import { GiCheckMark } from "react-icons/gi";
+import { IoMdHeart } from "react-icons/io";
+import { PiCoffeeFill } from "react-icons/pi";
+
 
 export default function About() {
 	const arr = ["Convert text to Uppercase", "Convert text to Lowercase", "Remove extra spaces", "Copy text to the clipboard",
@@ -8,7 +11,7 @@ export default function About() {
 	]
   return (
 	<div className='container '>
-		<div className='pt-5 text-center'>
+		<div className=' text-center'>
 		<h2>About TextUtils</h2>
 		<p className='mt-2'>TextUtils is a simple and useful text utility application that helps you analyze and modify your text quickly.</p>
 		<div class="card mt-5 mx-auto " style={{ backgroundColor: "#fff3cd" , maxWidth: "600px"}}>
@@ -26,7 +29,7 @@ export default function About() {
 		</div>
 		
 		<p className='pt-5'>Whether you are writing, editing, or simply analyzing text, TextUtils provides useful tools to make everyday text processing easier.</p>
-		<strong>Made with &hearts;</strong>
+		<strong>Made with <IoMdHeart className='text-danger'/>, coffee & code <PiCoffeeFill/></strong>
 		</div>
 	</div>
   )
