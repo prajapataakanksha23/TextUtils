@@ -38,8 +38,8 @@ export default function App() {
      <Navbar mode={mode} toggleMode={toggleMode}/>
      <Alerts alert={alert}/>
      <Routes>
-     <Route path="/" element={<TextForm heading="Enter the text to analyze below" showAlert={showAlert}/>}/>
-     <Route path="/about" element={<About/>}/>
+     <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" showAlert={showAlert}/>}/>
+     <Route exact path="/about" element={<About/>}/>
      </Routes>
      </BrowserRouter>
   )
