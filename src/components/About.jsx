@@ -11,14 +11,14 @@ export default function About() {
 	]
   return (
 	<div className='container '>
-		<div className=' text-center mt-5'>
+		<div className=' text-center mt-5 pt-5'>
 		<h2>About TextUtils</h2>
 		<p className='mt-2'>TextUtils is a simple and useful text utility application that helps you analyze and modify your text quickly.</p>
-		<div class="card mt-5 mx-auto " style={{ backgroundColor: "#fff3cd" , maxWidth: "600px"}}>
-  			<div class="card-body">
-    		<h5 class="card-title">With TextUtils, you can:</h5>
+		<div className="card mt-5 mx-auto " style={{ backgroundColor: "#fff3cd" , maxWidth: "600px"}}>
+  			<div className="card-body">
+    		<h5 className="card-title">With TextUtils, you can:</h5>
   			</div>
-  			<ul class="list-group list-group-flush list-unstyled ">
+  			<ul className="list-group list-group-flush list-unstyled pb-4">
     			{
 				arr.map((item)=>(
 					<li key={item} className="ms-5 py-1 text-start"><GiCheckMark className="me-2 text-success"/>{item}</li>
@@ -29,7 +29,7 @@ export default function About() {
 		</div>
 		
 		<p className='pt-5'>Whether you are writing, editing, or simply analyzing text, TextUtils provides useful tools to make everyday text processing easier.</p>
-		<strong>Made with <IoMdHeart className='text-danger'/>, coffee & code <PiCoffeeFill/></strong>
+		<strong className='pb-4'>Made with <IoMdHeart className='text-danger'/>, coffee & code <PiCoffeeFill/></strong>
 		</div>
 	</div>
   )
