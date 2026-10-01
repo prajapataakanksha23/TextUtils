@@ -45,7 +45,7 @@ export default function TextForm(props) {
   return (
 	<>
 	<div className='container'>
-		<div className='text-center pt-4'>
+		<div className='text-center pt-5'>
 		<h3 >Accidentally left the caps lock on and typed something, but can't be bothered to start again and retype it all?</h3>
 		<p>Simply enter your text and convert it to uppercase, lowercase, remove extra spaces and more.</p>
 

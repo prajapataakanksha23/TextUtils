@@ -5,7 +5,7 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 export default function Navbar(props) {
   return (
 	<div>
-		 <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} style={{backgroundColor: props.mode === "light" ? "#e2e3e5" : "#212529"}} >
+		 <nav className={`navbar navbar-expand-lg fixed-top navbar-${props.mode}`} style={{backgroundColor: props.mode === "light" ? "#e2e3e5" : "#212529"}} >
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">TextUtils</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

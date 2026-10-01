@@ -11,7 +11,7 @@ export default function About() {
 	]
   return (
 	<div className='container '>
-		<div className=' text-center'>
+		<div className=' text-center mt-5'>
 		<h2>About TextUtils</h2>
 		<p className='mt-2'>TextUtils is a simple and useful text utility application that helps you analyze and modify your text quickly.</p>
 		<div class="card mt-5 mx-auto " style={{ backgroundColor: "#fff3cd" , maxWidth: "600px"}}>
